@@ -1,6 +1,7 @@
-const { resolve } = require("path")
+import { resolve } from "path"
+import type { Configuration } from "webpack"
 
-module.exports = {
+const config: Configuration = {
     optimization: {
         minimize: false,
     },
@@ -22,3 +23,5 @@ module.exports = {
         path: resolve(__dirname, "dist"),
     },
 }
+
+export default config
