@@ -1,5 +1,5 @@
 # TypeScript reference project
 
-To run `index.ts` file without compilation:
+To run the example:
 
 `npm start`
