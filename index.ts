@@ -1,1 +1,3 @@
-console.log("Hello, World!")
+import observableExample from "./observableExample"
+
+observableExample()
