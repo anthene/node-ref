@@ -1,3 +1,7 @@
 import observableExample from "./observableExample"
+import observableVsGeneratorOfPromises from "./observableVsGeneratorOfPromises"
+import pushVsPullExample from "./pushVsPullExample"
 
-observableExample()
+// observableExample()
+// pushVsPullExample()
+observableVsGeneratorOfPromises()
