@@ -1,8 +1,8 @@
 import type { JSONSchemaType } from "ajv/dist/types/json-schema"
 
 import type Person from "./Person"
-
-const nameRegex = "^[A-Z][a-z]+$"
+import petValidationSchema from "./petValidationSchema"
+import { nameRegex } from "./nameRegex"
 
 export const personValidationSchema: JSONSchemaType<Person> = {
     type: "object",
@@ -19,6 +19,11 @@ export const personValidationSchema: JSONSchemaType<Person> = {
             type: "string",
             nullable: true,
         },
+        pets: {
+            type: "array",
+            items: petValidationSchema,
+            nullable: true,
+        }
     },
     required: [ "firstName", "lastName" ],
     additionalProperties: false,

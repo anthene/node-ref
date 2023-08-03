@@ -1,6 +1,7 @@
 import Ajv from "ajv"
 
 import type Person from "./Person"
+import type { PetType } from "./PetTypes"
 import { personValidationSchema } from "./personValidationSchema"
 
 const ajv = new Ajv({ allErrors: true })
@@ -31,4 +32,19 @@ const personWithExtraProperty: Person & { age: number } = {
 }
 
 if (!validatePerson(personWithExtraProperty))
+    console.error(validatePerson.errors)
+
+// sub properties
+const personWithPets: Person = {
+    firstName: "John",
+    lastName: "Smith",
+    pets: [
+        {
+            name: "Bobby",
+            type: "dog1" as PetType
+        },
+    ],
+}
+
+if (!validatePerson(personWithPets))
     console.error(validatePerson.errors)
