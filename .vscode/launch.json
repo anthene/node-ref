@@ -5,6 +5,7 @@
             "type": "coreclr",
             "request": "launch",
             "name": "Launch console",
+            "preLaunchTask": "Build",
             "program": "bin/Debug/net7.0/Project.dll",
         },
     ],
