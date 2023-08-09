@@ -1,5 +1,11 @@
 {
     "version": "0.2.0",
     "configurations": [
+        {
+            "type": "coreclr",
+            "request": "launch",
+            "name": "Launch console",
+            "program": "bin/Debug/net7.0/Project.dll",
+        },
     ],
 }
