@@ -5,7 +5,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch 'index.ts'",
-            "preLaunchTask": "npm: build",
+            "preLaunchTask": "npm-build",
+            "postDebugTask": "clean",
             "program": "${workspaceFolder}/index.ts",
             "outFiles": [
                 "${workspaceFolder}/bin/**/*.js",
