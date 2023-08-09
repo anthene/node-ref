@@ -12,5 +12,12 @@
                 "${workspaceFolder}/bin/**/*.js",
             ],
         },
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Launch browser",
+            "preLaunchTask": "npm-build",
+            "file": "index.html",
+        },
     ],
 }
