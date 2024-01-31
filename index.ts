@@ -1,3 +1,5 @@
-const someone: "World" | "Someone else" = "World"
-const message = `Hello, ${someone}!`
-console.log(message)
+import { bootstrapApplication } from "@angular/platform-browser"
+
+import { AppComponent } from "./app.component"
+
+bootstrapApplication(AppComponent)

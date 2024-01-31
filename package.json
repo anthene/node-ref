@@ -1,10 +1,14 @@
 {
   "dependencies": {
+    "@angular/core": "^17.1.1",
+    "@angular/platform-browser": "^17.1.1"
   },
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "@angular-devkit/build-angular": "^17.1.1",
+    "@angular/cli": "^17.1.1",
+    "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "ng build"
   }
 }
