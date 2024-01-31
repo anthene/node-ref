@@ -3,5 +3,7 @@
         "outDir": "bin",
         "sourceMap": true,
         "moduleResolution": "node",
+        "target": "ES2022",
+        "useDefineForClassFields": false,
     },
 }

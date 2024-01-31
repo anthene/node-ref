@@ -14,7 +14,23 @@
                         "browser": "index.ts",
                         "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.json"
+                    },
+                    "configurations": {
+                        "development": {
+                            "optimization": false,
+                            "extractLicenses": false,
+                            "sourceMap": true
+                        }
                     }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "development": {
+                            "buildTarget": "ang:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
                 }
             }
         }

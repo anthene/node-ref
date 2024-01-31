@@ -9,6 +9,7 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
+    "start": "ng serve",
     "build": "ng build"
   }
 }
