@@ -2,5 +2,7 @@
     "compilerOptions": {
         "outDir": "bin",
         "sourceMap": true,
+        "esModuleInterop": true,
+        "jsx": "react-jsx",
     },
 }
