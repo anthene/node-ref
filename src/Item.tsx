@@ -1,21 +1,25 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 
-import AppContext from "./AppContext"
+interface ItemProps {
+    clickCount: number
+    maxClickCount: number
+    maxClickCountChange(newValue: number): void
+}
 
-export default function () {
-    const [clickCount, setClickCount] = useState(0)
-    const [maxClickCount, setAppContextData] = useContext(AppContext)
+export default function (props: ItemProps) {
+    const [clickCount, setClickCount] = useState(props.clickCount)
+    const { maxClickCount, maxClickCountChange } = props
 
     function increaseClickCount() {
         const newMaxClickCount = clickCount + 1
         setClickCount(newMaxClickCount)
         if (newMaxClickCount > maxClickCount)
-            setAppContextData(newMaxClickCount)
+            maxClickCountChange(newMaxClickCount)
     }
 
     return (
         <li onClick={() => increaseClickCount()}>
-            Click count: {clickCount}{maxClickCount > clickCount ? "": " (it is max value)"}
+            Click count: {clickCount}{maxClickCount > clickCount ? "" : " (it is max value)"}
         </li>
     )
 }
